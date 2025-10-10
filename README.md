@@ -15,13 +15,20 @@ This repository serves as a hands-on showcase of modern **agentic and generative
 
 ## 🧩 Repository Structure
 
-agentic-gen-ai-showcase/
-├── agents/ # LLM agent frameworks (planning, reasoning)
-├── generative_models/ # Diffusion, transformers, multimodal demos
-├── rag_systems/ # Retrieval-augmented pipelines
-├── multimodal/ # CLIP, vision-language, audio-text agents
-├── evaluation/ # Benchmarking and visualization tools
-└── docs/ # Notes, papers, and documentation
+
+<details>
+<summary><strong>Repository Structure</strong></summary>
+
+<table>
+	<tr><th>Folder</th><th>Description</th></tr>
+	<tr><td><code>agents/</code></td><td>LLM agent frameworks (planning, reasoning)</td></tr>
+	<tr><td><code>generative_models/</code></td><td>Diffusion, transformers, multimodal demos</td></tr>
+	<tr><td><code>rag_systems/</code></td><td>Retrieval-augmented pipelines</td></tr>
+	<tr><td><code>multimodal/</code></td><td>CLIP, vision-language, audio-text agents</td></tr>
+	<tr><td><code>evaluation/</code></td><td>Benchmarking and visualization tools</td></tr>
+	<tr><td><code>docs/</code></td><td>Notes, papers, and documentation</td></tr>
+</table>
+</details>
 
 
 ---
