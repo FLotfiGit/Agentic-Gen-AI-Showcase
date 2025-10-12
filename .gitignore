@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_convert/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+
+# Outputs
+outputs/
+!outputs/.gitkeep
+
+# Mac
+.DS_Store

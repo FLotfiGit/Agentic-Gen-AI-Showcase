@@ -1,0 +1,10 @@
+openai
+faiss-cpu
+sentence-transformers
+transformers
+accelerate
+torch
+torchvision
+pillow
+diffusers
+requests
