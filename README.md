@@ -62,6 +62,22 @@ This repository serves as a hands-on showcase of modern **agentic and generative
 
 ---
 
+## 🏁 Quickstart
+
+1. Clone and set up environment
+	- Copy `.env.example` to `.env` and fill in keys (optional)
+	- Run setup
+   
+	Optional commands:
+	- make setup
+	- source .venv/bin/activate
+
+2. Open notebooks in VS Code and run cells.
+
+Outputs are saved to `./outputs/`.
+
+---
+
 ## 🤝 Contributions & Contact
 
 Suggestions and collaborations are welcome.  
