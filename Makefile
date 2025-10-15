@@ -28,3 +28,9 @@ PY
 
 clean:
 	rm -rf .venv __pycache__ */.ipynb_checkpoints
+
+run-smoke:
+    python tests/smoke.py
+
+clean-outputs:
+    python scripts/clean_outputs.py
