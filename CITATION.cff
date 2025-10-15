@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Agentic-Gen-AI-Showcase
+authors:
+  - family-names: Lotfi
+    given-names: Fatemeh
+  - family-names: Rajoli
+    given-names: Hossein
+date-released: 2025-10-15
+url: https://github.com/FLotfiGit/Agentic-Gen-AI-Showcase
+license: MIT

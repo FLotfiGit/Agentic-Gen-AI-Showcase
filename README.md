@@ -2,7 +2,7 @@
 A curated collection of experiments and frameworks exploring the intersection of **Agentic AI** and **Generative AI** — including reasoning-driven LLM agents, retrieval-augmented generation (RAG), multimodal synthesis, and autonomous decision-making systems.
 
 <p align="left">
-	<a href="https://github.com/FLotfiGit/Agentic-Gen-AI-Showcase/actions"><img src="https://img.shields.io/badge/CI-pending-lightgrey" alt="CI"/></a>
+		<a href="https://github.com/FLotfiGit/Agentic-Gen-AI-Showcase/actions/workflows/ci.yml"><img src="https://github.com/FLotfiGit/Agentic-Gen-AI-Showcase/actions/workflows/ci.yml/badge.svg" alt="CI"/></a>
 	<img src="https://img.shields.io/badge/Python-3.10+-blue" alt="Python"/>
 	<img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
 	<img src="https://img.shields.io/badge/Status-Experimental-orange" alt="Status"/>
