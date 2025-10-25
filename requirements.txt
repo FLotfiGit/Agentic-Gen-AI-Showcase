@@ -8,3 +8,4 @@ torchvision
 pillow
 diffusers
 requests
+pre-commit
