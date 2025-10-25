@@ -27,7 +27,7 @@ exit(0 if ok else 1)
 PY
 
 clean:
-	rm -rf .venv __pycache__ */.ipynb_checkpoints
+    rm -rf .venv __pycache__ */.ipynb_checkpoints
 
 run-smoke:
     python tests/smoke.py
