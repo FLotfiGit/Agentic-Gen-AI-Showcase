@@ -74,7 +74,18 @@ This repository serves as a hands-on showcase of modern **agentic and generative
 1. Clone and set up environment
 	- Copy `.env.example` to `.env` and fill in keys (optional)
 	- Run setup
-   
+		- Run setup
+
+3. Developer tools
+		- Install pre-commit and enable hooks:
+
+			```bash
+			pip install pre-commit
+			pre-commit install
+			pre-commit run --all-files
+			```
+
+		- CI will run pre-commit automatically on pushes and pull requests.
 	Optional commands:
 	- make setup
 	- source .venv/bin/activate
