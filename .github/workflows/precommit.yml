@@ -21,4 +21,5 @@ jobs:
           pip install -r requirements.txt || true
       - name: Run pre-commit
         run: |
-          pre-commit run --all-files || true
+          # Run all hooks and show diffs on failure; fail the job if hooks fail
+          pre-commit run --all-files --show-diff-on-failure
