@@ -77,4 +77,6 @@ if __name__ == "__main__":
 
     # Example generation
     prompt = "A futuristic AI agent in a neon-lit digital city, cinematic lighting"
-    generate_image(pipe, prompt=prompt, seed=1234, steps=25, guidance=8.0)
+    out = generate_image(pipe, prompt=prompt, seed=1234, steps=25, guidance=8.0)
+    # Print quick instructions for viewing
+    print(f"Open {out} to view the generated image. You can change seed/guidance in the script.")
