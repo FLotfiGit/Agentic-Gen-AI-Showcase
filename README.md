@@ -7,6 +7,10 @@ A curated collection of experiments and frameworks exploring the intersection of
 	<img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
 	<img src="https://img.shields.io/badge/Status-Experimental-orange" alt="Status"/>
 </p>
+<p align="left">
+  <a href="https://github.com/FLotfiGit/Agentic-Gen-AI-Showcase/actions/workflows/notebook-ci.yml"><img src="https://github.com/FLotfiGit/Agentic-Gen-AI-Showcase/actions/workflows/notebook-ci.yml/badge.svg" alt="notebook-ci"/></a>
+</p>
+</p>
 
 ---
 
