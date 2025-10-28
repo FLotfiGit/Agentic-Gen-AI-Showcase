@@ -1,0 +1,6 @@
+{
+  "nbstripout": {
+    "remove_outputs": true,
+    "remove_metadata": ["execution_count", "metadata.kernelspec", "metadata.language_info"]
+  }
+}
