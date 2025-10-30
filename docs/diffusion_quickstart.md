@@ -23,3 +23,19 @@ Tips
 - Set `HF_TOKEN` if using private HF models.
 - Change `prompt`, `seed`, `steps`, and `guidance` in the script to explore variation.
 - If you lack a GPU, set a smaller model or run with fewer steps to reduce runtime.
+
+CPU demo and batch generation
+
+This repository includes a lightweight CPU-friendly demo and a batch runner for learners without GPUs:
+
+- `generative_models/diffusion_cpu_demo.py` — attempts to load a Stable Diffusion pipeline; if loading fails, it falls back to saving a placeholder image with the prompt text (fast, useful for testing).
+- `generative_models/prompts.txt` — a small list of example prompts.
+- `generative_models/batch_generate.py` — runs the prompts in `prompts.txt` through the CPU demo and saves outputs to `./outputs/`.
+
+Run the batch generator:
+
+```bash
+python generative_models/batch_generate.py
+```
+
+This is intended for experimentation and learning; replace the prompts or connect to a real model when available.
