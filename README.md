@@ -98,6 +98,23 @@ This repository serves as a hands-on showcase of modern **agentic and generative
 
 Outputs are saved to `./outputs/`.
 
+### Running the diffusion demos
+
+Two example scripts live under `generative_models/`:
+
+- `diffusion_playground.py` — a guarded Stable Diffusion starter with CLI flags (GPU preferred).
+- `diffusion_cpu_demo.py` — CPU-friendly demo that falls back to a fast placeholder image when a model or GPU isn't available.
+
+Quick commands:
+
+```bash
+# GPU / playground (may download weights)
+python generative_models/diffusion_playground.py --prompt "A cinematic portrait of an astronaut" --steps 20
+
+# CPU demo (fast fallback)
+python generative_models/diffusion_cpu_demo.py --prompt "A friendly robot sipping coffee" --seed 7
+```
+
 ---
 
 ## 🤝 Contributions & Contact
