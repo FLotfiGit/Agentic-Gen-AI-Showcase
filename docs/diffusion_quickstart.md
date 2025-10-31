@@ -10,13 +10,13 @@ Requirements
 Run the script
 
 ```bash
-# create venv and install deps
+# create venv and install deps (repo Makefile provides a helper)
 make setup
 source .venv/bin/activate
 pip install -r requirements.txt
 
-# run the playground (may download model weights)
-python generative_models/diffusion_playground.py
+# run the playground (this will download model weights the first time)
+python generative_models/diffusion_playground.py --prompt "A serene landscape, matte painting" --steps 20 --seed 42
 ```
 
 Tips
@@ -32,9 +32,13 @@ This repository includes a lightweight CPU-friendly demo and a batch runner for 
 - `generative_models/prompts.txt` — a small list of example prompts.
 - `generative_models/batch_generate.py` — runs the prompts in `prompts.txt` through the CPU demo and saves outputs to `./outputs/`.
 
-Run the batch generator:
+Run the batch generator (or the CPU demo directly):
 
 ```bash
+# CPU-friendly demo (fast fallback if no model access)
+python generative_models/diffusion_cpu_demo.py --prompt "A small red robot reading a book" --seed 12
+
+# Batch prompts from prompts.txt
 python generative_models/batch_generate.py
 ```
 
