@@ -117,6 +117,27 @@ python generative_models/diffusion_cpu_demo.py --prompt "A friendly robot sippin
 
 ---
 
+### Try the Agent & Retrieval demos
+
+We added small, local-first agent and retrieval demos for learning and testing.
+
+- `agents/run_agent.py` — run a tiny plan->act agent (uses stub LLM by default, falls back to OpenAI when `OPENAI_API_KEY` is set).
+- `rag_systems/retriever_demo.py` — embed a tiny corpus with `sentence-transformers`, build a FAISS index, and run a query.
+
+Quick commands:
+
+```bash
+# Run the toy agent (uses stub if no API key)
+python agents/run_agent.py --goal "Summarize recent advances in retrieval-augmented generation" --max-steps 3
+
+# Run the retriever demo (requires sentence-transformers + faiss-cpu)
+python rag_systems/retriever_demo.py
+```
+
+See `docs/agent_quickstart.md` for more details.
+
+---
+
 ## 🤝 Contributions & Contact
 
 Suggestions and collaborations are welcome.  
