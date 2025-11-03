@@ -1,6 +1,5 @@
 {
   "python.defaultInterpreterPath": ".venv/bin/python",
   "jupyter.askForKernelRestart": false,
-  "jupyter.kernels.filter": ["Python"],
   "files.eol": "\n"
 }
