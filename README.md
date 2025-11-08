@@ -138,6 +138,22 @@ See `docs/agent_quickstart.md` for more details.
 
 ---
 
+CLI agent and artifact-run
+
+You can run a more complete, composed agent that wires planner, memory, executor and logger via the CLI. The CLI will attempt to use OpenAI when `OPENAI_API_KEY` is set; otherwise it uses the included stub LLM so the demo runs offline and deterministically.
+
+```bash
+# Run the full CLI agent (stub LLM by default)
+python agents/cli_agent.py --goal "Write a short summary about RAG" --max-steps 3
+
+# Or run the repository's example workflow which also writes logs to ./outputs/
+./scripts/run_agent_workflow.sh
+```
+
+The CI workflow (if enabled) runs the example workflow using the stubbed components and uploads `./outputs/` as artifacts for easy inspection.
+
+---
+
 ## 🤝 Contributions & Contact
 
 Suggestions and collaborations are welcome.  
