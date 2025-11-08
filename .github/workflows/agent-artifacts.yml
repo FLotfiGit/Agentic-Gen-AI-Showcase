@@ -1,0 +1,36 @@
+name: Agent artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/run_agent_workflow.sh'
+      - 'agents/**'
+    branches: [ main ]
+
+jobs:
+  run-agent-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Ensure scripts are executable
+        run: chmod +x scripts/run_agent_workflow.sh || true
+
+      - name: Run agent workflow (stub LLM path)
+        run: |
+          # Use the stub LLM and deterministic executor; no heavy deps required.
+          python -V
+          ./scripts/run_agent_workflow.sh
+
+      - name: Upload outputs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-outputs
+          path: outputs/
