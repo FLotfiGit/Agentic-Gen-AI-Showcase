@@ -152,6 +152,14 @@ python agents/cli_agent.py --goal "Write a short summary about RAG" --max-steps 
 
 The CI workflow (if enabled) runs the example workflow using the stubbed components and uploads `./outputs/` as artifacts for easy inspection.
 
+Make convenience
+
+If you prefer Make targets you can run the agent workflow via:
+
+```bash
+make run-agent
+```
+
 ---
 
 ## 🤝 Contributions & Contact
