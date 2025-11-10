@@ -34,3 +34,7 @@ run-smoke:
 
 clean-outputs:
     python scripts/clean_outputs.py
+
+run-agent:
+    # Run the example agent workflow (uses stub LLM by default)
+    ./scripts/run_agent_workflow.sh
