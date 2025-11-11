@@ -42,3 +42,7 @@ run-agent:
 format:
     # Run pre-commit hooks (formatting/linting) across the repo
     pre-commit run --all-files || true
+
+test-all:
+    # Run the full pytest test suite
+    pytest -q
