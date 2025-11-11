@@ -160,6 +160,18 @@ If you prefer Make targets you can run the agent workflow via:
 make run-agent
 ```
 
+Formatting & tests
+
+There are convenient Make targets to run formatting checks and tests:
+
+```bash
+# Run pre-commit hooks (format/linters) across the repository
+make format
+
+# Run a small repository smoke test (existing Make target)
+make test
+```
+
 ---
 
 ## 🤝 Contributions & Contact
