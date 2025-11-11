@@ -38,3 +38,7 @@ clean-outputs:
 run-agent:
     # Run the example agent workflow (uses stub LLM by default)
     ./scripts/run_agent_workflow.sh
+
+format:
+    # Run pre-commit hooks (formatting/linting) across the repo
+    pre-commit run --all-files || true
