@@ -1,0 +1,5 @@
+Write a concise summary of the benefits of retrieval-augmented generation.
+
+Generate a one-sentence caption for an image of a robot teaching a child.
+
+List three practical applications of multimodal AI in healthcare.
