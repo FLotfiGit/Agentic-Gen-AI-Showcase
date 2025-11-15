@@ -18,6 +18,7 @@ Examples
 python generative_models/batch_text_generate.py
 
 # Multimodal caption (safe offline)
+python scripts/create_sample_image.py  # creates examples/sample.jpg if you don't have one
 python multimodal/multimodal_demo.py --image examples/sample.jpg
 ```
 
