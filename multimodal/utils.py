@@ -3,6 +3,11 @@
 If CLIP (transformers + CLIPModel) is not installed, the embedding function returns a fixed-size random vector
 seeded by the image bytes so it's deterministic for the same image (useful for demos/tests).
 """
+"""Multimodal helpers: image preprocessing and optional CLIP embedding wrapper.
+
+If CLIP (transformers + CLIPModel) is not installed, the embedding function returns a fixed-size random vector
+seeded by the image bytes so it's deterministic for the same image (useful for demos/tests).
+"""
 from pathlib import Path
 from typing import List
 from PIL import Image
@@ -48,7 +53,9 @@ def get_image_embedding(path: str, model_name: str = None, dim: int = 512):
         # fallback deterministic random vector seeded by image bytes
         b = Path(path).read_bytes()
         h = hashlib.sha256(b).digest()
-        rng = np.random.RandomState(int.from_bytes(h[:8], "big"))
+        # Ensure seed fits into 32-bit range required by RandomState
+        seed = int.from_bytes(h[:8], "big") & 0xFFFFFFFF
+        rng = np.random.RandomState(seed)
         vec = rng.randn(dim).astype("float32")
         # normalize
         vec = vec / (np.linalg.norm(vec) + 1e-9)
