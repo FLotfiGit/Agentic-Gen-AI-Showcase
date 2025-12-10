@@ -3,6 +3,7 @@
 Helpers: ensure output dir, timestamped filenames, image saving helpers and device detection.
 """
 from pathlib import Path
+from typing import Optional
 import time
 from PIL import Image
 
@@ -20,7 +21,7 @@ def timestamped_filename(prefix: str = "image", prompt: str = "", ext: str = ".p
     return name
 
 
-def save_pil_image(img: Image.Image, out_dir: str = "./outputs", name: str | None = None, prefix: str = "image") -> str:
+def save_pil_image(img: Image.Image, out_dir: str = "./outputs", name: Optional[str] = None, prefix: str = "image") -> str:
     out = ensure_output_dir(out_dir)
     if name is None:
         name = timestamped_filename(prefix=prefix)
