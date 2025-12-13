@@ -109,15 +109,19 @@ class StreamingThresholdDetector(Detector):
         pass
 
     def update(self, x: float) -> Tuple[bool, float]:
+        # Score before adding to buffer
+        if len(self.buffer) >= 3:
+            m = sum(self.buffer) / len(self.buffer)
+            var = sum((v - m) ** 2 for v in self.buffer) / max(1, len(self.buffer) - 1)
+            std = math.sqrt(var)
+            score = abs(x - m) / std if std > 0 else 0.0
+        else:
+            score = 0.0
+        
         self.buffer.append(x)
         if len(self.buffer) > self.window:
             self.buffer.pop(0)
-        if len(self.buffer) < 5:
-            return False, 0.0
-        m = sum(self.buffer) / len(self.buffer)
-        var = sum((v - m) ** 2 for v in self.buffer) / max(1, len(self.buffer) - 1)
-        std = math.sqrt(var)
-        score = abs(x - m) / std if std > 0 else 0.0
+        
         return score >= self.threshold, score
 
     def detect(self, series: Iterable[float]) -> DetectionResult:
