@@ -33,6 +33,7 @@ This repository serves as a hands-on showcase of modern **agentic and generative
 <table>
 	<tr><th>Folder</th><th>Description</th></tr>
 	<tr><td><code>agents/</code></td><td>LLM agent frameworks (planning, reasoning)</td></tr>
+	<tr><td><code>agents/anomaly/</code></td><td>Lightweight anomaly detection (detectors, features, agent, CLI)</td></tr>
 	<tr><td><code>generative_models/</code></td><td>Diffusion, transformers, multimodal demos</td></tr>
 	<tr><td><code>rag_systems/</code></td><td>Retrieval-augmented pipelines</td></tr>
 	<tr><td><code>multimodal/</code></td><td>CLIP, vision-language, audio-text agents</td></tr>
@@ -170,6 +171,43 @@ make format
 
 # Run a small repository smoke test (existing Make target)
 make test
+```
+
+---
+
+### Anomaly Detection Quickstart
+
+A compact, agentic anomaly detection pipeline is available under `agents/anomaly/` with detectors (Z-score, IQR, streaming), feature extraction, evaluation, a CLI, and examples.
+
+Quick commands:
+
+```bash
+# Run CLI on a small series (JSON file or comma-separated values)
+python cli/anomaly_detect.py --window 10 --threshold 2.5 --input 0,0,0,10,0,0
+
+# Run the basic demo with metrics
+PYTHONPATH=. python examples/anomaly_demo.py
+
+# Run the advanced demo: ensemble + drift + sensitivity analysis
+PYTHONPATH=. python examples/anomaly_advanced_demo.py
+```
+
+Docs: see `docs/anomaly_detection.md`.
+
+---
+
+### Reasoning Chains Quickstart
+
+Reasoning utilities for agent workflows are available in `agents/reasoning_chains.py`:
+- ChainOfThought for step-by-step traces
+- SelfReflection for confidence and weak-step analysis
+- ReasoningChain for composable validated steps
+- TreeOfThoughts for branching exploration
+
+Run tests to explore functionality:
+
+```bash
+PYTHONPATH=. pytest -q tests/test_reasoning_chains.py
 ```
 
 ---
